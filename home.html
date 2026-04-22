@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+      body { margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#1a1a1a; color:#ffffff; min-height:100vh; display:flex; flex-direction:column; }
+      main { flex:1; }
+      footer { background:#0d0d0d; }
+      header { background:#0d0d0d; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+      header h1 { text-align:center; margin:0; color:#ffffff; font-size: 2.5em; letter-spacing: 1px; display:none; }
+      .top-nav { text-align:center; font-style: italic; background:#0d0d0d; padding: 12px 0; box-shadow: 0 1px 5px rgba(0,0,0,0.3); }
+      .top-nav a { margin:0 15px; color:#e0e0e0; text-decoration:none; font-weight: 600; transition:0.3s; display:inline-block; position:relative; z-index:10; pointer-events: auto; }
+      .top-nav a:hover { color:#ffffff; }
+      .top-nav a img { display:block; cursor:pointer; transition:0.3s; pointer-events: auto; }
+      .top-nav a:hover img { transform: scale(1.1); }
+      .top-nav span { margin:0 8px; color:#555; }
+      .hero { text-align:center; padding: 40px 20px; }
+      .hero img { border-radius: 50%; display:block; margin: 0 auto 20px; max-width: 200px; height:auto; }
+      .hero p { font-size: 1.05em; max-width: 640px; margin: 0 auto; line-height: 1.7; }
+    </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <header>
+    <nav class="top-nav">
+      <a href="home.html">Home</a>
+      <span>|</span>
+      <a href="About me.html">About Me</a>
+      <span>|</span>
+      <a href="Education.html">Education</a>
+      <span>|</span>
+      <a href="Projects.html">Projects</a>
+    </nav>
+  </header>
+
+  <!-- Main section -->
+  <main>
+    <section class="hero">
+      <img src="https://img.freepik.com/premium-photo/portrait-smiling-woman-black-hijab-glasses-soft-light-background_1286777-17797.jpg?semt=ais_hybrid&w=740&q=80" alt="Smiling woman in hijab" width="200" height="200">
+      <h2>Javeria Zia  | Student</h2>
+      <p>Aspiring Database Developer passionate about designing and managing efficient         relational databases.
+        Seeking opportunities to apply SQL and database design skills through internships or practical projects.</p> 
+    </section>
+  </main>
+
+  <footer>
+    <nav class="top-nav">
+
+      <a href="https://www.linkedin.com/in/javeria-zia-a3660631b" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" width="35px"></a>
+      <span> </span>
+      <a href="https://github.com/javeriazia26" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" width="35px"></a>
+      <span> </span>
+      <a href="mailto:javeriazia26@gmail.com"><img src="https://img.icons8.com/ios-filled/50/ffffff/mail.png" alt="Gmail" width="35px"></a>
+      <span> </span>
+      
+    </nav>
+  </footer>
+</body>
+
+</html>
