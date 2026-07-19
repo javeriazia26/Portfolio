@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background-color: #3fe0a5;
+  color: #080b10;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 text-ink-100 font-body antialiased;
+  font-feature-settings: 'ss01' on;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #080b10;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3242;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3d4759;
+}
+
+:focus-visible {
+  outline: 2px solid #3fe0a5;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@layer components {
+  .section-shell {
+    @apply max-w-content mx-auto px-6 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.28em] uppercase text-signal;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply w-4 h-px bg-signal/70;
+  }
+
+  .section-heading {
+    @apply font-display text-3xl sm:text-4xl md:text-[2.65rem] leading-[1.15] tracking-tight text-ink-100 mt-4 max-w-2xl;
+  }
+
+  .chip {
+    @apply font-mono text-[12px] leading-none px-3 py-2 rounded-md border border-ink-700 bg-ink-900/60 text-ink-200 whitespace-nowrap;
+  }
+
+  .card {
+    @apply rounded-2xl border border-ink-700 bg-gradient-to-b from-ink-850 to-ink-900/60;
+  }
+
+  .reveal {
+    opacity: 0;
+  }
+
+  .reveal.is-visible {
+    animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+  }
+}
