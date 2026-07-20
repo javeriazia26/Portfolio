@@ -2,85 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-::selection {
-  background-color: #3fe0a5;
-  color: #080b10;
+:root {
+  color-scheme: dark;
 }
 
-html {
+html,
+body {
+  background-color: #05070f;
   scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-ink-950 text-ink-100 font-body antialiased;
-  font-feature-settings: 'ss01' on;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
+h1,
+h2,
+h3,
+.font-display {
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.35);
+}
+
+/* subtle scrollbar to match dark theme */
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #080b10;
+  background: #05070f;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a3242;
-  border-radius: 999px;
+  background: #1c2233;
+  border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3d4759;
+  background: #263049;
 }
 
-:focus-visible {
-  outline: 2px solid #3fe0a5;
-  outline-offset: 3px;
-  border-radius: 2px;
+.section-container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
-@layer components {
-  .section-shell {
-    @apply max-w-content mx-auto px-6 sm:px-8 lg:px-10;
-  }
-
-  .eyebrow {
-    @apply inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.28em] uppercase text-signal;
-  }
-
-  .eyebrow::before {
-    content: '';
-    @apply w-4 h-px bg-signal/70;
-  }
-
-  .section-heading {
-    @apply font-display text-3xl sm:text-4xl md:text-[2.65rem] leading-[1.15] tracking-tight text-ink-100 mt-4 max-w-2xl;
-  }
-
-  .chip {
-    @apply font-mono text-[12px] leading-none px-3 py-2 rounded-md border border-ink-700 bg-ink-900/60 text-ink-200 whitespace-nowrap;
-  }
-
-  .card {
-    @apply rounded-2xl border border-ink-700 bg-gradient-to-b from-ink-850 to-ink-900/60;
-  }
-
-  .reveal {
-    opacity: 0;
-  }
-
-  .reveal.is-visible {
-    animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+@media (min-width: 768px) {
+  .section-container {
+    max-width: 720px;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
-  .reveal {
-    opacity: 1 !important;
+@media (min-width: 1024px) {
+  .section-container {
+    max-width: 1080px;
   }
 }
