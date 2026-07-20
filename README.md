@@ -1,108 +1,58 @@
-# Javeria Zia — Portfolio (React + Tailwind)
+# Javeria Zia — Portfolio
 
-A React + Tailwind CSS recreation of the Framer portfolio site, rebuilt as a clean,
-production-ready Vite project.
+A pixel-faithful recreation of the Framer portfolio, rebuilt with **React + Vite + Tailwind CSS + Framer Motion**.
 
 ## Stack
 
-- React 18 + Vite 5
-- Tailwind CSS 3 (custom design tokens: `ink` palette, `signal` accent, Space Grotesk /
-  Inter / JetBrains Mono type system)
-- No UI kit — every component is hand-built and lives in `src/components`
+- React 18
+- Vite 5
+- Tailwind CSS 3
+- Framer Motion (scroll-reveal + entrance animations)
+- lucide-react (icon set matching the original outline icons)
 
 ## Getting started
 
 ```bash
 npm install
-npm run dev       # start local dev server
-npm run build     # production build -> dist/
-npm run preview   # preview the production build
+npm run dev
+```
+
+Open the printed local URL (usually `http://localhost:5173`).
+
+## Build
+
+```bash
+npm run build
+npm run preview
 ```
 
 ## Project structure
 
 ```
-portfolio/
-├── index.html
-├── tailwind.config.js
-├── postcss.config.js
-├── vite.config.js
-├── public/
-│   └── favicon.svg
-└── src/
-    ├── main.jsx
-    ├── App.jsx
-    ├── index.css              # Tailwind layers + base styles + reveal utility
-    ├── hooks/
-    │   └── useReveal.js        # IntersectionObserver-based scroll reveal
-    ├── data/
-    │   └── content.js          # all copy/content lives here, edit freely
-    └── components/
-        ├── Navbar.jsx
-        ├── Hero.jsx
-        ├── About.jsx
-        ├── Skills.jsx
-        ├── Projects.jsx
-        ├── GithubStats.jsx
-        ├── Contact.jsx
-        └── Footer.jsx
+src/
+  components/     Reusable UI primitives (Navbar, Card, Button, Pill, Marquee, IconRow, SectionHeading)
+  sections/        Page sections (Hero, About, Skills, Projects, Contact, Footer)
+  data/
+    content.js     All copy/content extracted from the source screenshots — edit here to update text
+  index.css        Tailwind directives + base theme
+  App.jsx          Composes all sections
+  main.jsx         React entry point
 ```
 
-## Editing content
+## Design tokens
 
-All copy (roles, skills, projects, contact info) is centralized in
-`src/data/content.js` — update it there rather than hunting through components.
+Colors, radii, and the marquee animation are defined centrally in `tailwind.config.js`:
 
-## Deploying to GitHub Pages (javeriazia26/Portfolio)
+- Background: `#05070F`
+- Card background: `#0E111C`
+- Accent blue: `#2563EB`
+- Borders: `rgba(255,255,255,0.08)`
+- Muted text: `#8B93A7`
 
-This project is preconfigured for `https://javeriazia26.github.io/Portfolio/`:
+## Notes
 
-- `vite.config.js` sets `base: '/Portfolio/'` so built asset paths resolve correctly
-  under that subpath. If you ever rename the repo, move to a custom domain, or use a
-  user/org page (`javeriazia26.github.io` with no subpath), change `base` back to `'/'`.
-- `.github/workflows/deploy.yml` builds the app and publishes `dist/` to GitHub Pages
-  automatically on every push to `main`.
-
-### One-time setup
-
-1. Push this project to the `javeriazia26/Portfolio` repo (see commands below).
-2. On GitHub: **Settings → Pages → Source → GitHub Actions**.
-3. Push to `main` (or re-run the workflow from the Actions tab) — the site builds and
-   deploys automatically. Check the **Actions** tab for progress/errors.
-
-### Pushing this project to your existing repo
-
-Your repo currently has old static files (`index.html`, `About me.html`,
-`Education.html`) — this replaces them entirely with the React project.
-
-```bash
-# from inside this portfolio/ folder
-git init                                   # only if it isn't already a git repo
-git remote add origin https://github.com/javeriazia26/Portfolio.git
-git add -A
-git commit -m "Replace static site with React + Tailwind portfolio"
-git branch -M main
-git push -f origin main
-```
-
-(`-f` force-pushes since this fully replaces the old static-site history's file tree —
-skip `-f` if you'd rather merge/resolve conflicts manually.)
-
-### Local testing before you push
-
-```bash
-npm install
-npm run build
-npm run preview   # serves the production build locally so you can sanity-check it
-```
-
-## Notes on the recreation
-
-- Sections match the source site 1:1: sticky nav → hero → about → skills → featured
-  projects → other projects → GitHub stats → contact → footer.
-- Scroll-reveal animation (`data-reveal` + `useReveal` hook) fades/slides sections in as
-  they enter the viewport, respecting `prefers-reduced-motion`.
-- The hero role line cycles through the four roles listed on the source site with a
-  blinking-cursor typewriter accent.
-- Fully responsive: single-column mobile layout, 2–3 column grids from `sm`/`lg` breakpoints
-  up, collapsible mobile nav menu.
+- The source reference was a single continuous mobile-width screenshot (888px). The mobile breakpoint (`<640px`) mirrors that layout exactly (single column, stacked cards, full-width buttons). Tablet/desktop breakpoints extend the skills grid to 2–3 columns and the hero to a wider max-width — a reasonable, non-creative extension since no desktop screenshot was provided.
+- The "Made in Framer" watermark badge from the original screenshot is a Framer platform artifact (not part of the actual portfolio design) and was intentionally omitted.
+- All animations are scroll-triggered fade/slide-ins via Framer Motion's `whileInView`, plus a CSS keyframe marquee for the scrolling background text ribbon between Hero and About.
+- Update `src/data/content.js` to change any text, links, or list items without touching component markup.
+- Replace placeholder URLs in `content.js` (`githubUrl`, `linkedinUrl`, `resumeUrl`, individual project `githubUrl`s) with your real links.
