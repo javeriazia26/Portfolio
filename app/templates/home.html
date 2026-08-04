@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        
+            <nav>
+                <div class="nav-left">
+                    <img src="{{ url_for('static', filename='image/logo_128.png') }}" alt="Logo" class="logo-small"  width="32" height="32">
+                    <span><b>Javeria Zia</b></span>
+                </div>
+                    
+                <div class="nav-center">
+                    <a href="#about"> About</a> </li>
+                    <a href="#skills"> Skills</a> </li>
+                    <a href="#projects"> Projects</a> </li>
+                    <a href="#certificates"> Certificates</a> </li>
+                    <a href="#github"> GitHub</a> </li>
+                    <a href="#contact"> Contact</a> </li>
+                    
+                </div>
+
+                <div class="nav-right">
+                    <a href="{{ url_for('static', filename='image/resume.pdf') }}" target="_blank">Resume</a>
+                </div>
+            </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="tag-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="6" rx="2"/>
+                <rect x="2" y="15" width="20" height="6" rx="2"/>
+                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                <line x1="6" y1="18" x2="6.01" y2="18"/>
+                </svg>  BACKEND &middot; DATABASES &middot; SECURITY
+            </div>
+
+
+            <h1>Javeria Zia</h1>
+            <h4>Computer Science Student | Backend Developer <br>
+                | Database Enthusiast | Aspiring Cybersecurity Engineer  </h4>
+            <p>I am a Computer Science student passionate about backend development, database systems,<br>
+                and cybersecurity. I enjoy building secure web applications, designing relational databases, and <br>
+                continuously learning modern backend technologies. Currently, I am expanding my knowledge in <br>
+                Cybersecurity Fundamentals and strengthening my understanding of secure software development.</p>
+
+            <form>
+                <a href="#projects" target="_blank" class="btn">View Projects</a>
+                <a href ="https://raw.githubusercontent.com/javeriazia26/Resume/main/Resume.pdf" target="_blank" class="btn">Download Resume</a>
+            </form>
+
+            <div class="feature-badges">
+                <div class="feature-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="6" rx="2"/>
+                        <rect x="2" y="15" width="20" height="6" rx="2"/>
+                        <line x1="6" y1="6" x2="6.01" y2="6"/>
+                        <line x1="6" y1="18" x2="6.01" y2="18"/>
+                    </svg>
+                    Backend Development
+                </div>
+                <div class="feature-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/>
+                    </svg>
+                    Relational Design
+                </div>
+                <div class="feature-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2 4 5v6c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V5l-8-3z"/>
+                    </svg>
+                    Secure Systems
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="about">
+
+            <h5>About Me</h5>
+            <h3>Focused on secure, scalable backend systems.</h3>
+
+            <div class="about-grid">
+
+                <!-- Card 1: Intro text -->
+                <div class="about-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="card-icon">
+                        <polyline points="4 17 10 11 4 5"/>
+                        <line x1="12" y1="19" x2="20" y2="19"/>
+                    </svg>
+                    <p>I am pursuing a BS in Computer Science at Federal Urdu University of Arts, Science and Technology with a CGPA of 3.67/4.00. I enjoy solving real-world problems through software while focusing on secure and scalable application development. I am continuously improving my skills by building projects rather than only following tutorials.</p>
+                </div>
+
+                <!-- Card 2: Primary interests -->
+                <div class="about-card">
+                    <h4>Primary interests</h4>
+                    <ul class="interest-list">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="6" rx="2"/>
+                                <rect x="2" y="15" width="20" height="6" rx="2"/>
+                                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                                <line x1="6" y1="18" x2="6.01" y2="18"/>
+                            </svg>
+                            Backend Development
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                                <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/>
+                            </svg>
+                            Database Design
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2 4 5v6c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V5l-8-3z"/>
+                            </svg>
+                            Cybersecurity
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: University -->
+                <div class="about-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="card-icon">
+                        <path d="M22 10 12 5 2 10l10 5 10-5Z"/>
+                        <path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/>
+                    </svg>
+                    <h4>Federal Urdu University of Arts, Science and Technology</h4>
+                    <p class="muted">Bachelor of Science in Computer Science &middot; CGPA: 3.67 / 4.00</p>
+                </div>
+
+                <!-- Card 4: Coursework -->
+                <div class="about-card">
+                    <h4>Relevant coursework</h4>
+                    <p class="muted">Database Management Systems &middot; Data Structures &amp; Algorithms &middot; Object-Oriented Programming &middot; Software Engineering &middot; Software Project Management &middot; Fundamentals of Programming</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="skills">
+
+            <span class="section-label">TECHNICAL SKILLS</span>
+            <h3>Backend foundations with database and security depth.</h3>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h4>Programming Languages</h4>
+                    <p>Python &middot; C &middot; SQL &middot; HTML &middot; CSS</p>
+                </div>
+
+                <div class="skill-card highlighted">
+                    <h4>Backend</h4>
+                    <p>Flask &middot; SQLAlchemy &middot; Flask-Login &middot; Flask-WTF &middot; Jinja2</p>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Database</h4>
+                    <p>SQLite &middot; Oracle &middot; Database Design &middot; Normalization &middot; SQL &middot; PostgreSQL</p>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Security</h4>
+                    <p>Authentication &middot; Authorization (RBAC) &middot; Hashing &middot; Parameterized Queries &middot; Audit Logging &middot; REST Api &middot; Encryption</p>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Currently Learning</h4>
+                    <p>&middot; Cybersecurity Fundamentals</p>
+                </div>
+
+                <div class="skill-card">
+                    <h4>Tools</h4>
+                    <p>Git &middot; GitHub &middot; VS Code &middot; Oracle SQL Developer &middot; Microsoft SQL Server &middot; Neon &middot; Vercel</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="projects">
+
+            <span class="section-label">FEATURED PROJECTS</span>
+            <h3>Project work that demonstrates backend, database, and security thinking.</h3>
+
+            <!-- Featured project -->
+            <div class="project-card featured">
+                <span class="featured-tag">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15 8.5 22 9.3 17 14 18.2 21 12 17.8 5.8 21 7 14 2 9.3 9 8.5 12 2"/>
+                    </svg>
+                    FEATURED PROJECT
+                </span>
+
+                <h4>Student Scholarship Hub</h4>
+                <p>A Flask-based scholarship management system designed to streamline scholarship applications and administration while following secure backend development practices.</p>
+
+                <p class="tag-line">RBAC &middot; Authentication &amp; Authorization &middot; Password Hashing &middot; REST API &middot; SQLAlchemy ORM &middot; Parameterized Queries &middot; Audit Logging &middot; CRUD Operations &middot; Multi-table Relational Database &middot; Encryption &middot; Database Migration &middot; PostgreSQL</p>
+
+                <p class="tech-stack"><strong>Tech Stack:</strong> Flask &middot; Python &middot; HTML &middot; CSS &middot; SQLite &middot; SQLAlchemy &middot; Jinja2 &middot; Bootstrap &middot; PostgreSQL</p>
+
+                <div class="project-actions">
+                    <a href="https://github.com/javeriazia26/Web_App_with_Flask/tree/main/Student%20Scholaship%20Hub%20App" target="_blank" class="btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://scholarship-hub-nu.vercel.app/" target="_blank" class="btn btn-outline">Demo</a>
+                </div>
+            </div>
+
+
+    
+            <!-- Secondary projects -->
+
+            <div class="project-card">
+                <h4>Portfolio</h4>
+                <p>Developed a responsive portfolio website using Flask, HTML, CSS, and Jinja2. Demonstrated proficiency in backend development and frontend design.</p>
+                <p class="tech-stack"><strong>Tech Stack:</strong> Flask &middot; Python &middot; HTML &middot; CSS &middot; Jinja2 &middot; Bootstrap</p>
+                <div class="project-actions">
+                    <a href="https://github.com/javeriazia26/Portfolio/tree/main" target="_blank" class="btn btn-outline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h4>Scholarship Funding Management System</h4>
+                <p>A comprehensive database project focused on designing and implementing a normalized relational database for managing scholarship funding records.</p>
+                <p class="tag-line">Database Design &middot; ER Diagram &middot; 1NF/2NF/3NF &middot; SQL Queries &middot; Relationships &middot; Data Integrity</p>
+                <p class="tech-stack"><strong>Tech Stack:</strong> SQL &middot; Oracle Database</p>
+                <div class="project-actions">
+                    <a href="https://github.com/javeriazia26/DBMS_PROJECTS/tree/main/SFMS " target="_blank" class="btn btn-outline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+
+
+            <!-- Other projects -->
+            <h4 class="other-projects-heading">Other Projects</h4>
+
+            <div class="other-projects-grid">
+
+                <div class="other-project-card">
+                    <h5>Student Management System (C)</h5>
+                    <p>Application where user can check account info and track their saving with basic features.</p>
+                    <a href="https://github.com/javeriazia26/GUI_Base_with_C/tree/main/Student_GPA_System" target="_blank" class="btn-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="other-project-card">
+                    <h5>Tic Tac Toe (C)</h5>
+                    <p>Classic Tic Tac Toe game developed in C.</p>
+                    <a href="https://github.com/javeriazia26/GUI_Base_with_C/tree/main/tic_tac_toe_game" target="_blank" class="btn-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/>
+                    </svg>       
+                    GitHub
+                </a>
+                </div>
+
+                <div class="other-project-card">
+                    <h5>Library Management System (Python)</h5>
+                    <p>Application that manage User, Books and their information.</p>
+                    <a href="https://github.com/javeriazia26/GUI_Base_with_Python/tree/main/Liabrary_Management_System" target="_blank" class="btn-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/>
+                    </svg>      
+                    GitHub
+                    </a>
+                </div>
+
+                <div class="other-project-card">
+                    <h5>Bank Management System (Python)</h5>
+                    <p>Application where user can check account info and track their saving with basic features.</p>
+                    <a href="https://github.com/javeriazia26/GUI_Base_with_Python/tree/main/Bank%20Account%20Management" target="_blank" class="btn-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/>
+                    </svg> 
+                    GitHub
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="certificates" class="section">
+            <div class="container">
+                <h2 class="section-title">Certificates</h2>
+
+                <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                    <span class="timeline-date">August - 2026</span>
+                    <h3>Introduction to Cybersecurity</h3>
+                    <p class="timeline-issuer">Cisco Network Academy</p>
+                    <p class="timeline-desc">Completed Cisco's Introduction to Cybersecurity, building a strong foundation in cybersecurity principles, common threats, network security, and risk management.</p>
+                    <div class="certificate-actions">
+                        <a href="{{ url_for('static', filename='image/certificates/intro_to_cybersecurity.pdf') }}" target="_blank" class="btn">View Certificate</a>
+                        <a href="https://www.credly.com/badges/06bde0fe-f93c-426b-91fd-c548f07ee18b" target="_blank" class="btn btn-outline">View Credential</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                    <span class="timeline-date">Auguest - 2026</span>
+                    <h3>Cybersecurity Landscape</h3>
+                    <p class="timeline-issuer">Cisco Network Academy</p>
+                    <p class="timeline-desc">Currently completing Cybersecurity Landscape, expanding my knowledge of cyber defense, threat landscapes, blue team operations, and modern security practices.</p>
+                    <div class="certificate-actions">
+                        <a href="#" target="_blank" class="btn">In Progress</a>
+                        <!-- <a href="https://www.netacad.com/courses/cybersecurity" target="_blank" class="btn btn-outline">View Credential</a> -->
+                    </div>
+                    </div>
+                </div>
+
+                <!-- <div class="timeline-item timeline-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                    <span class="timeline-date">2023</span>
+                    <h3>Certification Name</h3>
+                    <p class="timeline-issuer">Issuing Organization</p>
+                    <p class="timeline-desc">Short description of what this certification covers.</p>
+                    </div>
+                </div>
+                </div>
+            </div> -->
+        </section>
+
+        <section id="github">
+
+            <span class="section-label">GITHUB STATISTICS</span>
+            <h3>Live development activity from GitHub.</h3>
+
+            <div class="github-grid">
+
+                <div class="about-card">
+                    <h4>GitHub Stats</h4>
+                    <p class="muted">Linked to the live GitHub profile for repositories, contributions, and activity.</p>
+                </div>
+
+                <div class="about-card">
+                    <h4>Languages</h4>
+                    <p class="muted">Python, SQL, C, HTML, and CSS across backend, database, and desktop projects.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="contact">
+
+            <div class="contact-card">
+
+                <span class="section-label">CONTACT</span>
+                <h3>Let's connect about backend, database, or cybersecurity opportunities.</h3>
+
+                <div class="contact-info">
+                    <span class="contact-pill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m22 6-10 7L2 6"/>
+                        </svg>
+                        javeriazia26@gmail.com
+                    </span>
+                    <span class="contact-pill">
+                        <a href="https://github.com/javeriazia26" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/>
+                            </svg>
+                            javeria-zia
+                        </a>
+                    </span>
+                    <span class="contact-pill">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Karachi, Pakistan
+                    </span>
+                </div>
+
+                <div class="contact-actions">
+                    <a href="mailto:javeriazia26@gmail.com" class="btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m22 6-10 7L2 6"/>
+                        </svg>
+                        Email Me
+                    </a>
+                    <a href="https://github.com/javeriazia26" target="_blank" class="btn btn-outline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.5.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/javeriazia26" target="_blank" class="btn btn-outline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.4 20.4h-3.5v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 3v5.5H9.5V9h3.4v1.6h.05c.5-.9 1.6-1.8 3.3-1.8 3.6 0 4.2 2.4 4.2 5.4v6.2ZM5.3 7.4a2 2 0 1 1 0-4.1 2 2 0 0 1 0 4.1ZM7.1 20.4H3.6V9h3.5v11.4Z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+    <footer>
+        <p>Designed and Developed by Javeria Zia</p>
+        <p>
+            <a href="https://www.linkedin.com/in/javeriazia26" target="_blank">LinkedIn</a>
+            &middot;
+            <a href="https://github.com/javeriazia26" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+    </main>
+
+</body>
+</html>

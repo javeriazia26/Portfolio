@@ -1,0 +1,763 @@
+/* ==========================================================================
+   VARIABLES — change colors here and they update everywhere on the site
+   ========================================================================== */
+
+:root {
+    --bg-color: #05050a;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.08);
+
+    --accent: #ffffff;
+    --accent-bg: rgba(255, 255, 255, 0.06);
+    --accent-border: rgba(255, 255, 255, 0.25);
+
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+}
+
+
+/* ==========================================================================
+   BASE / RESET
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==========================================================================
+   LAYOUT — structure
+   ========================================================================== */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+main section {
+    padding: 100px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* subtle divider between sections instead of a hard jump */
+main section + section {
+    border-top: 1px solid var(--card-border);
+}
+
+
+/* ==========================================================================
+   HEADER / NAV
+   ========================================================================== */
+
+header {
+    border-bottom: 1px solid var(--card-border);
+    position: sticky;
+    top: 0;
+    background: var(--bg-color);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 24px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-left span {
+    font-size: 16px;
+}
+
+
+
+
+.logo-small {
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 9px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.nav-center {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-center a {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+.nav-center a:hover {
+    color: var(--text-main);
+}
+
+.nav-right a {
+    color: var(--text-main);
+    font-size: 15px;
+    padding: 8px 18px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+}
+
+.nav-right a:hover {
+    border-color: var(--accent-border);
+}
+
+
+/* ==========================================================================
+   SHARED COMPONENTS — buttons, badges, section labels
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--accent);
+    color: #000;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid var(--accent);
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:hover {
+    background: #e5e5e5;
+    border-color: #e5e5e5;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--card-border);
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-border);
+}
+
+.section-label {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+
+/* ==========================================================================
+   HOME / HERO SECTION
+   ========================================================================== */
+
+#home {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.tag-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border: 1px solid var(--accent-border);
+    background: var(--accent-bg);
+    border-radius: 999px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 28px;
+}
+
+#home h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+#home h4 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+#home > p {
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 720px;
+    margin-bottom: 36px;
+}
+
+#home form {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 48px;
+}
+
+.feature-badges {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.feature-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.feature-badge svg {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+
+/* ==========================================================================
+   ABOUT SECTION
+   ========================================================================== */
+
+#about h5 {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+#about h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.about-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.about-card .card-icon {
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.about-card h4 {
+    color: var(--text-main);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.about-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.about-card p.muted {
+    color: var(--text-muted);
+}
+
+.interest-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.interest-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.interest-list li svg {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+
+/* ==========================================================================
+   SKILLS SECTION
+   ========================================================================== */
+
+#skills h3 {
+    color: var(--text-main);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    row-gap: 24px;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 24px 28px;
+}
+
+.skill-card.highlighted {
+    background: var(--accent-bg);
+    border: 1px solid var(--accent-border);
+}
+
+.skill-card h4 {
+    color: var(--text-main);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.skill-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================================
+   PROJECTS SECTION
+   ========================================================================== */
+
+#projects h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 32px;
+    margin-top: 28px;
+}
+
+.project-card.featured {
+    background: var(--accent-bg);
+    border-color: var(--accent-border);
+}
+
+.featured-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.project-card h4 {
+    color: var(--text-main);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.project-card > p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.project-card .tag-line {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.project-card .tech-stack {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.project-card .tech-stack strong {
+    color: var(--text-main);
+}
+
+.project-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.other-projects-heading {
+    color: var(--text-main);
+    font-size: 20px;
+    margin: 56px 0 24px 0;
+}
+
+.other-projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    row-gap: 20px;
+}
+
+.other-project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px 24px;
+}
+
+.other-project-card h5 {
+    color: var(--text-main);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.other-project-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+/* ==========================================================================
+   CERTIFICATIONS TIMELINE
+   ========================================================================== */
+
+#certificates h2.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--card-border);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 0 40px 48px;
+    box-sizing: border-box;
+}
+
+.timeline-left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-right {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg-color);
+    box-shadow: 0 0 0 2px var(--card-border);
+    z-index: 2;
+}
+
+.timeline-left .timeline-dot {
+    right: -6px;
+}
+
+.timeline-right .timeline-dot {
+    left: -6px;
+}
+
+.timeline-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 20px 24px;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.timeline-date {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.timeline-card h3 {
+    color: var(--text-main);
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+}
+
+.timeline-issuer {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0 0 8px;
+}
+
+.timeline-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 16px;
+}
+
+.certificate-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.certificate-actions .btn {
+    padding: 9px 16px;
+    font-size: 13px;
+    border-radius: 999px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-actions .btn-outline {
+    background: transparent;
+    color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+    }
+    .timeline-item,
+    .timeline-left,
+    .timeline-right {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding-left: 50px;
+        padding-right: 16px;
+    }
+    .timeline-left .timeline-dot,
+    .timeline-right .timeline-dot {
+        left: 14px;
+        right: auto;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   GITHUB STATISTICS SECTION
+   ========================================================================== */
+
+#github h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.github-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
+
+#contact h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 32px;
+    max-width: 650px;
+}
+
+.contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 48px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.contact-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    color: var(--text-main);
+    font-size: 14px;
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-pill svg {
+    flex-shrink: 0;
+    color: #3b82f6;
+}
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--card-border);
+    margin-top: 60px;
+}
+
+footer p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+footer a {
+    color: var(--text-muted);
+}
+
+
+/* ==========================================================================
+   RESPONSIVE — stacks grids on smaller screens
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .other-projects-grid,
+    .github-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
